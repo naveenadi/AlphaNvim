@@ -27,7 +27,7 @@ opt.shadafile = "NONE"
 -- and print an error message
 local nvim_opts_status, _ = pcall(load_nvim_opts, opts.nvim)
 if not nvim_opts_status then
-   opts = require("core.default_config").options
+   opts = require("core.defaults").options
    load_nvim_opts(opts.nvim)
    print "Error: user config - `options` - `nvim`"
 end

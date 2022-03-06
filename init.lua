@@ -4,6 +4,4 @@ if present then
    impatient.enable_profile()
 end
 
-require("plugins")
-
 require("core")
