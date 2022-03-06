@@ -43,7 +43,7 @@ M.options = {
   },
   
   -- alpha options
-  alpha {
+  alpha = {
     copy_cut = true, -- copy cut text ( x key ), visual and normal mode
     copy_del = true, -- copy deleted text ( dd key ), visual and normal mode
     insert_nav = true, -- navigation in insertmode
