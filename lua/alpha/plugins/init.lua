@@ -55,6 +55,11 @@ return require("packer").startup(function(use)
 	-- Packer can manage itself
 	use({ "wbthomason/packer.nvim", opt = true })
 
+	use({ "rose-pine/neovim", config = [[vim.cmd('colorscheme rose-pine')]] })
+
+	use({ "nvim-treesitter/nvim-treesitter" })
+	use({ "bkegley/gloombuddy" })
+
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if packer_bootstrap then

@@ -14,7 +14,7 @@ local function load_nvim_opts(nvim_opts)
 	end
 end
 
-cmd("colorscheme desert")
+
 cmd("filetype plugin indent on")
 
 -- disable nvim intro

@@ -46,10 +46,10 @@ M.options = { -- general nvim/vim options, check :h optionname to know more abou
 	undofile = true, -- save undo information in a file
 	updatetime = 250, -- after this many milliseconds flush swap file
 	shadafile = vim.opt.shadafile,
-	completeopt = { "menuone", "noinsert", "noselect" }, --  options for Insert mode completion
+	completeopt = { "menu", "menuone", "noinsert", "noselect" }, --  options for Insert mode completion
 	joinspaces = false, -- two spaces after a period with a join command
 	list = false, -- show <Tab> and <EOL>
-	wildmode = { "list", "longest" }, -- mode for 'wildchar' command-line expansion
+	-- wildmode = { "list:longest" }, -- mode for 'wildchar' command-line expansion
 
 	swapfile = true, -- don't use swapfile
 	showmatch = true, -- highlight matching parentheses
@@ -71,9 +71,9 @@ M.autocmds = {
 		-- {"BufWritePost",[[$VIM_PATH/{*.vim,*.yaml,vimrc} nested source $MYVIMRC | redraw]]};
 		{ "BufWritePre", "$MYVIMRC", "lua require('alpha.core.utils').ReloadConfig()" },
 	},
-	change_header = {
-		{ "BufWritePre", "*", "lua require('tools').changeheader()" },
-	},
+	-- change_header = {
+	-- 	{ "BufWritePre", "*", "lua require('tools').changeheader()" },
+	-- },
 	packer = {
 		{ "BufWritePost", "plugins.lua", "PackerCompile" },
 	},
